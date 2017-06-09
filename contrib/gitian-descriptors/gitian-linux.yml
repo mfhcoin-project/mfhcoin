@@ -1,5 +1,5 @@
 ---
-name: "mfhcoin-linux-0.10"
+name: "mfhcoin-linux-0.11"
 enable_cache: true
 suites:
 - "precise"
