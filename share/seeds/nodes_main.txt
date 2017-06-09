@@ -1,0 +1,4 @@
+# List of Mfhcoin IPv4 nodes sorted by 30 day availability, block height and version.
+
+192.168.100.11:1511
+194.1.239.13:1511

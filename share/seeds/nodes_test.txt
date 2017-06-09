@@ -1,0 +1,4 @@
+# List of fixed seed nodes for testnet
+
+192.168.100.11:11511
+194.1.239.13:11511
