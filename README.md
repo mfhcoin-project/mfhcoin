@@ -3,13 +3,13 @@ Mfhcoin Core
 
 https://mfhcoin.info
 
-###### Ticker: MFH
-###### Block time: max 10 min
-###### Reward: 70 Coin
-###### Max coins: 300.000.000 Coins
-###### Premine: 10% (30.000.000 Coins)
-###### RPC: 1512
-###### P2P: 1511
+* Ticker: MFH
+* Block time: max 10 min
+* Reward: 70 Coin
+* Max coins: 300.000.000 Coins
+* Premine: 10% (30.000.000 Coins)
+* RPC: 1512
+* P2P: 1511
 
 Compiling
 -------------------
