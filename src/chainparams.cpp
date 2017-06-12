@@ -112,7 +112,7 @@ public:
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x5e2743561a30e862511b88552ff7ebd7c944e3b65592c94f39d2df6153f01abd"));
         assert(genesis.hashMerkleRoot == uint256("0x4949b33f47578eada376cf3f3228ceb4bf14db6cae526a67a9fee22cb7c04338"));
-        vSeeds.push_back(CDNSSeedData("microcrm.online", "dnsseed.microcrm.online"));
+        vSeeds.push_back(CDNSSeedData("mfhcoin.info", "dnsseed.mfhcoin.info"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(48);
         base58Prefixes[SCRIPT_ADDRESS] = list_of(5);
