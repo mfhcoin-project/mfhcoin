@@ -1246,6 +1246,10 @@ CAmount GetBlockValue(int nHeight, const CAmount& nFees)
 {
 
     CAmount nSubsidy = 70 * COIN;
+    if(nHeight == 1)
+    {
+        nSubsidy = 30000000 * COIN;
+    }
 
     int halvings = nHeight / Params().SubsidyHalvingInterval();
 
