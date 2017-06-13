@@ -1246,11 +1246,24 @@ CAmount GetBlockValue(int nHeight, const CAmount& nFees)
 {
 
     CAmount nSubsidy = 70 * COIN;
+
+
     if(nHeight == 1)
     {
         nSubsidy = 30000000 * COIN;
     }
-
+    if(nHeight > 1500)
+    {
+        nSubsidy = 50 * COIN;
+    }
+    else if(nHeight > 3000)
+    {
+        nSubsidy = 25 * COIN;
+    }
+    else if(nHeight > 6000)
+    {
+        nSubsidy = 15 * COIN;
+    }
     int halvings = nHeight / Params().SubsidyHalvingInterval();
 
     // Force block reward to zero when right shift is undefined.

@@ -42,11 +42,11 @@ static void convertSeed6(std::vector<CAddress> &vSeedsOut, const SeedSpec6 *data
 
 static Checkpoints::MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        (    0, uint256("0x0226c66d3f4c828d2f3f4e9ad2cb62ca6bf59ebd3d051f8cf1ac67a0890d6352"))
+        (    0, uint256("0x3fd3991934a8e6b098c644f1900990d397617ae984e01304466e630d10edbf23"))
         ;
 static const Checkpoints::CCheckpointData data = {
         &mapCheckpoints,
-        1497344400, // * UNIX timestamp of last checkpoint block
+        1497371400, // * UNIX timestamp of last checkpoint block
         0,   // * total number of transactions between genesis and last checkpoint
                     //   (the tx=... number in the SetBestChain debug.log lines)
         5500.0     // * estimated number of transactions per day after checkpoint
@@ -54,18 +54,18 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
         boost::assign::map_list_of
-        ( 0, uint256("0x7eada7442ce24094de4dd95e26c382ad2871736e9f198d709497b3729d31c83c"))
+        ( 0, uint256("0x64e292c3dd873c262c4b906aa4498612bbd266dbf1eeb8e85a0ff3e5280951f9"))
         ;
 static const Checkpoints::CCheckpointData dataTestnet = {
         &mapCheckpointsTestnet,
-        1496926801,
+        1497371401,
         0,
         576
     };
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
         boost::assign::map_list_of
-        ( 0, uint256("54debfe48795bd315541cc5b86c40b882b75469785283736b7d0268047973014"))
+        ( 0, uint256("9e6786f11d68dc6275f7f3983ac90209990e1c3a7076f536a3c051e1ec03aebb"))
         ;
 static const Checkpoints::CCheckpointData dataRegtest = {
         &mapCheckpointsRegtest,
@@ -91,10 +91,10 @@ public:
         nRejectBlockOutdatedMajority = 1200;
         nToCheckBlockUpgradeMajority = 1500;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 24 * 60 * 60; // 1 days
+        nTargetTimespan = 20 * 60; // 1 days
         nTargetSpacing = 10 * 60; // 10 minutes
 
-        const char* pszTimestamp = "Apple confronts Trump climate agenda during NBA finals";
+        const char* pszTimestamp = "The Real Madrid footballer faces a lawsuit for allegedly defrauding Spain of millions";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -105,13 +105,13 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1497344400;
+        genesis.nTime    = 1497371400;
         genesis.nBits    = 0x1e0ffff0;
-        genesis.nNonce   = 302569;
+        genesis.nNonce   = 725264;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0226c66d3f4c828d2f3f4e9ad2cb62ca6bf59ebd3d051f8cf1ac67a0890d6352"));
-        assert(genesis.hashMerkleRoot == uint256("0x4949b33f47578eada376cf3f3228ceb4bf14db6cae526a67a9fee22cb7c04338"));
+        assert(hashGenesisBlock == uint256("0x3fd3991934a8e6b098c644f1900990d397617ae984e01304466e630d10edbf23"));
+        assert(genesis.hashMerkleRoot == uint256("0xc8cd804eab7a2c8261d04c74bd40b2365c38ad263e61a5a539b03b0be3f04d0c"));
         vSeeds.push_back(CDNSSeedData("mfhcoin.info", "dnsseed.mfhcoin.info"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(48);
@@ -161,10 +161,10 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 24 * 60 * 60; // 5 days
         nTargetSpacing = 10 * 60; // 10 minutes
-        genesis.nTime = 1497344401;
-        genesis.nNonce = 1551993;
+        genesis.nTime = 1497371401;
+        genesis.nNonce = 2825339;
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x7eada7442ce24094de4dd95e26c382ad2871736e9f198d709497b3729d31c83c"));
+        assert(hashGenesisBlock == uint256("0x64e292c3dd873c262c4b906aa4498612bbd266dbf1eeb8e85a0ff3e5280951f9"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -214,12 +214,12 @@ public:
         nTargetTimespan = 1 * 24 * 60 * 60; // 5 days
         nTargetSpacing = 10 * 60; // 10 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1497344402;
+        genesis.nTime = 1497371402;
         genesis.nBits = 0x207fffff;
-        genesis.nNonce = 4;
+        genesis.nNonce = 2;
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 11411;
-        assert(hashGenesisBlock == uint256("0x54debfe48795bd315541cc5b86c40b882b75469785283736b7d0268047973014"));
+        assert(hashGenesisBlock == uint256("0x9e6786f11d68dc6275f7f3983ac90209990e1c3a7076f536a3c051e1ec03aebb"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();  //! Regtest mode doesn't have any DNS seeds.
