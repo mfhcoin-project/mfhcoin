@@ -18,8 +18,7 @@ UNIX
 -------
 
 ```bash
-./autogen.sh
-./configure
+./unix-build.sh
 make
 make install # optional
 ```
