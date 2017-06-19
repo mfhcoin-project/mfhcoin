@@ -16,6 +16,10 @@ Compiling
 
 UNIX
 -------
+```bash
+apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libminiupnpc-dev
+apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
+```
 
 ```bash
 ./unix-build.sh
