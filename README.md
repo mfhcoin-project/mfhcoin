@@ -16,13 +16,28 @@ Compiling
 
 UNIX
 -------
+Note
+---
+Always use absolute paths to configure and compile litecoin and the dependencies, for example, when specifying the path of the dependency:
+```bash
+../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
+```
+Here BDB_PREFIX must be an absolute path - it is defined using $(pwd) which ensures the usage of the absolute path.
 ```bash
 apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libminiupnpc-dev
+apt-get install libboost-all-dev
 apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
 ```
 
 ```bash
 ./unix-build.sh
+make install # optional
+```
+
+```bash
+./autogen.sh
+./configure
+make
 make install # optional
 ```
 
